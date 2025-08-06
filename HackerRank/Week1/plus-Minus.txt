@@ -1,0 +1,18 @@
+ public static void plusMinus(List<Integer> arr) {
+        int countP=0,countN=0,count0=0;
+        for(int i=0;i<arr.size();i++){
+            if(arr.get(i)==0){
+                count0++;
+            }
+            else if(arr.get(i)<0){
+                countN++;
+            }
+            else{
+                countP++;
+            }
+        }
+        System.out.println((double)countP/arr.size());
+        System.out.println((double)countN/arr.size());
+        System.out.println((double)count0/arr.size());
+        
+    }
