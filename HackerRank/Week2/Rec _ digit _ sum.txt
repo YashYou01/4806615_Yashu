@@ -1,0 +1,19 @@
+long initialSum = 0;
+        for (char c : n.toCharArray()) {
+            initialSum += Character.getNumericValue(c);
+        }
+        initialSum *= k;
+        return helo(initialSum);
+    }
+
+    private static int helo(long num) {
+        if (num < 10) {
+            return (int) num;
+        }
+        long nextSum = 0;
+        while (num > 0) {
+            nextSum += num % 10;
+            num /= 10;
+        }
+        return helo(nextSum);
+    }

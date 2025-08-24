@@ -1,0 +1,11 @@
+int totalSum = arr.stream().mapToInt(Integer::intValue).sum();
+        int LS = 0;
+
+        for (int num : arr) {
+            if (LS == totalSum - leftSum - num) {
+                return "YES";
+            }
+            LS += num;
+        }
+        return "NO";
+    }

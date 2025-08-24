@@ -1,0 +1,13 @@
+ if (n == 0) return 1;  
+
+        long countZeroBitsss = 0;
+        long temp = n;
+
+        while (temp > 0) {
+            if ((temp & 1) == 0) {
+                countZeroBitsss++;
+            }
+            temp >>= 1;
+        }
+
+        return 1L << countZeroBitsss;

@@ -1,0 +1,15 @@
+ Map<Integer, Integer> mp = new HashMap<>();
+    for (int i = 0; i < n; i++) {
+        if (mp.containsKey(ar.get(i))) {
+            mp.put(ar.get(i), mp.get(ar.get(i)) + 1);
+        } else {
+            mp.put(ar.get(i), 1);
+        }
+    }
+    int count = 0;
+    for (Map.Entry<Integer, Integer> e : mp.entrySet()) {
+        count += e.getValue() / 2;
+    }
+    return count;
+
+    }
