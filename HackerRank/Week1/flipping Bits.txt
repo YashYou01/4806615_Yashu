@@ -1,0 +1,6 @@
+ public static long flippingBits(long n) {
+    // Write your code here
+     return ~n & 0xFFFFFFFFL;
+    }
+
+}
